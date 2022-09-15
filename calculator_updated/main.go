@@ -1,6 +1,7 @@
 package main
 
 import (
+	"calculator_updated/calculator"
 	"fmt"
 	"time"
 )
@@ -32,13 +33,13 @@ func main() {
 	var operation string
 	fmt.Scanln(&operation)
 	if operation == "add" {
-		fmt.Println("Result:", add(first, second))
+		fmt.Println("Result:", calculator.Add(first, second))
 	} else if operation == "diff" {
-		fmt.Println("Result:", diff(first, second))
+		fmt.Println("Result:", calculator.Diff(first, second))
 	} else if operation == "multiply" {
-		fmt.Println("Result:", multiply(first, second))
+		fmt.Println("Result:", calculator.Multiply(first, second))
 	} else if operation == "div" {
-		fmt.Println("Result:", div(first, second))
+		fmt.Println("Result:", calculator.Div(first, second))
 	} else {
 		fmt.Println("invalid")
 	}
